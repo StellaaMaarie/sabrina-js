@@ -52,7 +52,40 @@
         console.log(makeSquare(13));
 
         // Name function 
-        
+        function makeName(fName, mName, lName) {
+            let fullName = fName + " " + mName + " " + lName;
+            return fullName;
+        }
+
+        console.log(makeName("Ted" , "Rafael" , "Cruz"));
+        console.log(makeName("Robert" , "\"Beto\"" , "O'Rourke"));
+
+        // Making better name function
+        function makebetterName(firstName, middleName, lastName) {
+            if (middleName.length === 1) {
+                // let fullName = firstName + " " + middleName + ". " + lastName;
+                middleName = middleName + ".";
+                let fullName = firstName + " " + middleName + " " + lastName;
+                return fullName;
+            } else {
+                let fullName = firstName + " " + middleName + " " + lastName;
+                return fullName;
+            }
+        }
+        console.log(makebetterName("Joan", "Marie", "Larkin"));
+        console.log(makebetterName("Donald", "F", "Trump"));
+
+        //Score function
+        function makeScore(homeTeam, awayTeam) {
+            if (homeTeam > awayTeam) {
+                return "Home team wins";
+            } else if (homeTeam < awayTeam) {
+                return "Away team wins";
+            } else (homeTeam === awayTeam)
+                    return "It's a tie"; 
+            }
+        console.log(makeScore(8,6));
+
 
     </script>
 </body>
